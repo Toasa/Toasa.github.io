@@ -1,4 +1,4 @@
 function buttonClick() {
-    nth = document.getElementById('nth').value
+    var nth = document.getElementById('nth').value
     alert('nth:', nth);
 }
