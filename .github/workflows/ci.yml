@@ -30,6 +30,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - run: cd src
       - name: build
-        # run: go build ./...
-        run: ls -al
+        run: GOOS=js GOARCH=wasm go build -o main.wasm
