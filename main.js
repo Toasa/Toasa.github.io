@@ -4,8 +4,8 @@ function buttonClick() {
 
     alert("typeof(nth): " + typeof(nth))
 
-    if (!Number.isInteger(nth)) {
-        output.innerText = 'Input must be integer (' + nth + ')'
+    if (isNaN(parseInt(nth))) {
+        output.innerText = 'Input must be integer: ' + nth
         return
     }
 
