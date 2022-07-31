@@ -2,7 +2,7 @@ function buttonClick() {
     var nth = document.getElementById('nth').value
     output = document.getElementById('output')
 
-    if (Number.isInteger(nth)) {
+    if (!Number.isInteger(nth)) {
         output.innerText = 'Input must be integer (' + nth + ')'
         return
     }
