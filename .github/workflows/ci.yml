@@ -31,4 +31,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: build
-        run: go build ./...
+        # run: go build ./...
+        run: pwd
