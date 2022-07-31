@@ -2,8 +2,6 @@ function buttonClick() {
     var nth = document.getElementById('nth').value
     output = document.getElementById('output')
 
-    alert("typeof(nth): " + typeof(nth))
-
     if (isNaN(parseInt(nth))) {
         output.innerText = 'Input must be integer: ' + nth
         return
