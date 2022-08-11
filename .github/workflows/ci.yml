@@ -3,7 +3,6 @@ name: go-ci
 on: [push]
 
 jobs:
-  # 共通処理
   setup:
     runs-on: ubuntu-latest
     steps:
@@ -15,7 +14,6 @@ jobs:
       - name: check out
         uses: actions/checkout@v2
 
-      # 処理を高速化するために環境をキャッシュ
       - name: Cache
         uses: actions/cache@v2.1.0
         with:
@@ -24,7 +22,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-go-
 
-  # buildテスト
   build:
     needs: setup
     runs-on: ubuntu-latest
