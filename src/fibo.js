@@ -7,7 +7,7 @@ function buttonClick() {
         return
     }
 
-    output.innerText = 'nth: ' + fibo(nth)
+    output.innerText = nth + 'th: ' + fibo(nth)
 }
 
 function fibo(n) {
