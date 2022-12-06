@@ -2,8 +2,8 @@ function buttonClick() {
     var nth = document.getElementById('nth').value
     output = document.getElementById('output')
 
-    if (isNaN(parseInt(nth))) {
-        output.innerText = 'Input must be integer: ' + nth
+    if (isNaN(parseInt(nth)) || nth < 1) {
+        output.innerText = 'Input must be positive integer: ' + nth
         return
     }
 
