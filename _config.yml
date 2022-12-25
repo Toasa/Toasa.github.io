@@ -5,11 +5,12 @@ url: "https://toasa.github.io/" # the base hostname & protocol for your site, e.
 github_username: toasa
 
 # Build settings
-markdown: kramdown
-
-kramdown:
-  input: GFM
-  hard_wrap: false
+markdown: CommonMarkGhPages
+commonmark:
+  extensions:
+    - autolink
+    - strikethrough
+    - table
   
 theme: minima
 plugins:
