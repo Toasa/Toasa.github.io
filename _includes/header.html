@@ -13,11 +13,6 @@
                 </span>
             </label>
 
-            <div class="trigger">
-                <a class="page-link" href="/diary/2022/12/24.html">2022-12-24</a>
-                <a class="page-link" href="/diary/2022/12/25.html">2022-12-25</a>
-            </div>
-
 
             <!--
             {% for cat in site.categories %}
@@ -29,24 +24,6 @@
             </ul>
             {% endfor %}
             -->
-
-            {% for category in site.categories %}
-            <div class="catbloc" id="{{ category | first | remove:' ' }}">
-                <h2>{{ category | first }}</h2>
-
-                <ul>
-                    {% for posts in category %}
-                    {% for post in posts %}
-                    {% if post.url %}
-                    <li>
-                        <a href="{{ post.url }}"> {{ post.title }} </a>
-                    </li>
-                    {% endif %}
-                    {% endfor %}
-                    {% endfor %}
-                </ul>
-            </div>
-            {% endfor %}
 
         </nav>
     </div>
